@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="selectedCountry"
+            type="com.omersungur.countryapi.model.CountryModel" />
+    </data>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.CountryFragment"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ImageViewCountry"
+        android:layout_margin="5dp"
+        android:downloadUrl="@{selectedCountry.countryFlag}"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="200dp"
+        android:scaleType="fitCenter"
+        android:layout_marginBottom="10dp">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/countryNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{selectedCountry.countryName}"
+        android:layout_gravity="center"
+        android:textSize="26sp"
+        android:layout_marginBottom="10dp"
+        android:textColor="#FF0000">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/countryCapitalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{selectedCountry.countryCapital}"
+        android:layout_gravity="center"
+        android:textSize="22sp"
+        android:layout_marginBottom="10dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/countryRegionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{selectedCountry.countryRegion}"
+        android:layout_gravity="center"
+        android:textSize="22sp"
+        android:layout_marginBottom="10dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/countryCurrencyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{selectedCountry.countryCurrency}"
+        android:layout_gravity="center"
+        android:textSize="22sp"
+        android:layout_marginBottom="10dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/countryLanguageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{selectedCountry.countryLanguage}"
+        android:layout_gravity="center"
+        android:textSize="22sp">
+
+    </TextView>
+
+
+</LinearLayout>
+
+</layout>
